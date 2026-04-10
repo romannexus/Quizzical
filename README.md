@@ -1,16 +1,52 @@
-# React + Vite
+# Quizzical App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive trivia game that tests your knowledge with random questions from the Open Trivia Database.
 
-Currently, two official plugins are available:
+**Note:** This application is an **MVP (Minimum Viable Product)** built specifically as a practice project to solidify modern React skills, including state management, side effects, and API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Dynamic Data:** Fetches multiple-choice questions from the [Open Trivia API](https://opentdb.com/).
+- **Smart Scoring:** Validates user selections against correct answers and calculates the final score.
+- **Play Again:** Seamlessly resets the game state and fetches a fresh batch of questions without full page reloads.
+- **Responsive UI:** Clean and intuitive interface with dynamic CSS classes for selecting and checking answers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built With
 
-## Expanding the ESLint configuration
+- **React 19** (Functional Components, `useState`, `useEffect`)
+- **Vite** (Build tool)
+- **CSS3** (Custom styling)
+- **Dependencies:**
+  - `nanoid` - For generating unique keys and IDs.
+  - `he` - For decoding HTML entities received from the API.
+  - `clsx` - For dynamically constructing CSS class names.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally
+
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/romannexus/Quizzical.git](https://github.com/romannexus/Quizzical.git)
+   ```
+2. **Navigate to the project directory:**
+   ```bash
+   cd Quizzical
+   ```
+3. **Install NPM packages:**
+   ```bash
+   npm install
+   ```
+4. **Set up Environment Variables:**
+   Create a `.env` file in the root of the project and add the API URL:
+   ```env
+   VITE_API_URL=[https://opentdb.com/api.php?amount=4&type=multiple](https://opentdb.com/api.php?amount=4&type=multiple)
+   ```
+5. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+## Acknowledgements
+
+This project was built as the final solo project for the fantastic **"Learn React"** course taught by **Bob Ziroll** on [Scrimba](https://scrimba.com/). Huge thanks to Bob and the Scrimba team for the excellent interactive learning experience!
